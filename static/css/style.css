@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+
+#emoji-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.falling-emoji {
+    position: absolute;
+    top: -30px;
+    left: calc(50% - 15px);
+    font-size: 58px;
+    animation: emojiRain 5s linear;
+    animation-fill-mode: forwards;
+    opacity: 0.5;
+}
+
+@keyframes emojiRain {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+}
+
+
+
+#emoji-select {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    text-align-last: center;
+}
+
+#emoji-select option {
+    text-align: center;
+}
